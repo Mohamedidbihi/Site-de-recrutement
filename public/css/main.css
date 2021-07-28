@@ -1,0 +1,386 @@
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+ :root {
+  --main-bg-color: #e23e57;
+  --main-text-color: #e23e57;;
+  --second-text-color: #2b2e4a;
+  --second-bg-color: #2b2e4a;
+}
+
+.primary-text {
+  color: var(--main-text-color);
+}
+
+.second-text {
+  color: var(--second-text-color);
+}
+
+.primary-bg {
+  background-color: var(--main-bg-color);
+}
+
+.secondary-bg {
+  background-color: var(--second-bg-color);
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+#wrapper {
+  overflow-x: hidden;
+ background-color: lavender;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#menu-toggle {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+}
+
+.list-group-item.active {
+  background-color: transparent;
+  color: var(--main-text-color);
+  font-weight: bold;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+    .banner-image2 {
+      background-image: url('../img/marvin-meyer-SYTO3xs06fU-unsplash.jpg');
+      background-size: cover;
+    }
+.banner-image {
+    background-image: url('../img/business-meeting-about-employment.jpg');
+    background-size: cover;
+  }
+ .nav-color
+ {
+     
+    background-color: white;
+ }
+ .nav-title
+ {
+     color: #383e56 !important;
+ }
+ body {
+    font-family: 'poppins', sans-serif;
+    font-weight: 300;
+   }
+   .bgg
+   {
+     background-color: #383e56;
+     color: #fff;
+   }
+   h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+   }
+   .titre-col
+   {
+     color: #e23e57;
+   }
+  li a {
+   font-weight: bold;
+   }
+   .text
+   {
+      
+    position: absolute;
+    top: 35%;
+    left: 15%;
+   }
+   .blocA h1
+   {
+     padding-top: 80px;
+     color: #2b2e4a;
+     font-weight: 800;
+     font-size: 3em;
+   }
+   .blocA a
+   {
+    display: inline-block;
+    font-size: 1em;
+    background: #e23e57;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px;;
+    font-weight: 500;
+    margin-top: 10px;
+    color: white;
+    letter-spacing: 2px;
+    transition: 0.2s;
+  
+   }
+   .text h2
+   {
+     font-size: 5vw;
+     font-weight: 800;
+     color: #2b2e4a;
+     line-height: 1em;
+     text-transform: uppercase;
+   }
+   .text h3
+   {
+     font-size: 4vw;
+     font-weight: 800;
+     color: #2b2e4a;
+     line-height: 1em;
+     text-transform: uppercase;
+   }
+   .text a
+   {
+     display: inline-block;
+     font-size: 1em;
+     background: #fff;
+     padding: 10px 30px;
+     text-transform: uppercase;
+     text-decoration: none;
+     border-radius: 30px;;
+     font-weight: 500;
+     margin-top: 10px;
+     color: #e23e57;
+     letter-spacing: 2px;
+     transition: 0.2s;
+   }
+   .text a:hover
+   {
+     letter-spacing: 6px;
+     color: #2b2e4a;
+   }
+   .bt:hover
+   {
+     letter-spacing: 3px;
+   }
+   .blocA a:hover
+   {
+     letter-spacing: 1px;
+     color: #2b2e4a;
+   }
+   .blank
+   {
+     padding-top: 40px;
+     padding-bottom: 40px;
+   }
+   .pic1 img
+   {
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+   } 
+   .blocB span
+   {
+     font-weight: bold;
+     color: #e23e57;
+   }
+   .blocB h1
+   {
+     font-weight: 800;
+     color: #2b2e4a ;
+   }
+   p
+   {
+     font-size: 20px;
+   }
+   .blocC video
+   {
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+   }
+   .blocC span
+   {
+     font-weight: bold;
+     color: #e23e57;
+   }
+   .blocC h1
+   {
+     font-weight: 800;
+     color: #2b2e4a ;
+   }
+   ::-moz-selection { 
+    color: #2b2e4a;
+    background: #e23e57;
+  }
+  
+  ::selection {
+    color: #2b2e4a;
+    background: #e23e57;
+  }
+  .blocD
+  {
+    width: 90%;
+    height: 400px;
+    background: #e23e57;
+    padding: auto;
+    margin: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 49% 100%, 49% 100%, 0 83%);
+  }
+  .blocD p
+  {
+  font-size: 20px;
+  }
+ 
+  footer li a
+  {
+    font-weight: normal;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  footer li a:hover {
+    text-decoration: underline;
+    color: #e23e57;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .blocD
+    {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      height: 700px;
+    }
+    .text
+  {
+    top: 10%;
+  }
+  }
+  .image_header
+  {
+    height: 300px;
+  }
+footer strong
+{
+  color: rgb(214, 88, 88);
+}
+.formsignup
+{
+  opacity: 0.9;
+}
+.Titre_formulaire
+{
+  color: #2b2e4a;
+}
+.search-sec{
+  padding: 2rem;
+}
+.search-slt{
+  display: block;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #55595c;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: calc(3rem + 2px) !important;
+  border-radius:0;
+}
+.wrn-btn{
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  height: calc(3rem + 2px) !important;
+  border-radius:0;
+}
+@media (min-width: 992px){
+  .search-sec{
+      position: relative;
+      top: -114px;
+      background: rgba(26, 70, 104, 0.51);
+  }
+}
+.Offres
+{
+  padding-left: 80px;
+  padding-right: 80px;
+
+}
+
+@media (max-width: 992px){
+  .search-sec{
+      background: #1A4668;
+  }
+  .Offres
+{
+  padding-left: 0;
+  padding-right: 0;
+
+}
+}
+.texta
+{
+ position: absolute;
+ top: 12%;
+ left: 15%;
+}
+.texta h2
+{
+  font-size: 5vw;
+  font-weight: 800;
+  color: #2b2e4a;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.texta h3
+{
+  font-size: 4vw;
+  font-weight: 600;
+  color: #2b2e4a;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.offre{
+  margin-top: 100px;
+}
+.offre h2{
+  color: #e23e57;
+}
+.ButtPost{
+float: right;
+width: 120px;
+height: 60px;
+};
+.infos{
+  display: flex;
+}
+
