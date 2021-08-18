@@ -35,7 +35,7 @@
     <div class="container-fluid px-4">
         <div class="row my-5">
             <h3 class="fs-4 mb-3">Valider - Refuser - Mettre en attente : Les offres</h3>
-            <div class="col">
+            <div class="col table-responsive ">
                 <table class="table bg-white rounded shadow-sm  table-hover">
                     <thead>
                         <tr>
@@ -51,8 +51,8 @@
                         @foreach ($AllOffres as $offre)
                         <tr>
                             <th scope="row">{{Carbon\Carbon::parse($offre->created_at)->format('Y-m-d')}}</th>
-                            <td>{{$offre->Titre}}</td>
                             <td>{{$offre->societe}}</td>
+                            <td>{{$offre->Titre}}</td>
                             <td>{{$offre->Etat}}</td>
                             <td>
                                 <ul class="list-inline m-0">
@@ -83,6 +83,7 @@
                                 <li class="list-inline-item">
                                     <button class="btn btn-danger btn-sm rounded-0" type="submit" data-toggle="tooltip" data-placement="top" title="Refuser"><i class="far fa-thumbs-down"></i></button>
                                 </li>
+                                  </form>
                                 @endif
                                   
                                 {{-- @endif --}}
@@ -91,8 +92,9 @@
                             </td>
                         </tr>
 
-                        {{-- {{ $AllOffres->links() }} --}}
+                     
                         @endforeach
+                        
                         @else
                         <div class="alert alert-danger text-center" role="alert">
                           <strong>Aucun annonce trouver</strong>
@@ -102,6 +104,7 @@
                 </table>
             </div>
         </div>
+        {{ $AllOffres->links() }}
 
     </div>
 </div>

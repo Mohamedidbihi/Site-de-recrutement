@@ -21,7 +21,7 @@ On s'occupe de vous.</h1>
 <div class="container blocB">
 <div class="row">
 <div class="col-md-6 pic1 ">
-<img src="../img/leon-vbxyFxlgpjM-unsplash.jpg" width="100%" height="100%">
+<img src="../img/job.jpg" width="100%" height="100%">
 </div>
 <div class="col-md-6">
 <br><br>

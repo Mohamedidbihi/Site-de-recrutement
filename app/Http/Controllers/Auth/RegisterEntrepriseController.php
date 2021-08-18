@@ -59,9 +59,9 @@ if ($users != null) {
           'fax' => $request->fax,
           'ville_id' => $request->ville,
           'adresse' => $request->adresse]);
-        DB::commit();
-        Auth::attempt($request->only('email', 'password'));
-        return redirect()->route('AccueillEntreprise');
+           DB::commit();
+           Auth::attempt($request->only('email', 'password'));
+           return redirect()->route('AccueillEntreprise');
     } catch (\Exception $e) {
         DB::rollback();
         return back()->with('status', "Erreur d'insertion");

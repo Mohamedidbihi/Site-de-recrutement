@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class region extends Model
 {
+
     use HasFactory;
     protected $fillable = [
         'region',
@@ -16,4 +17,5 @@ class region extends Model
     {
         return $this->hasMany(ville::class);
     }
+    
 }

@@ -68,13 +68,14 @@
 
         <div class="row my-5">
             <h3 class="fs-4 mb-3">Les offres de la semaine :</h3>
-            <div class="col">
-                <table class="table table-white bg-white  rounded shadow-sm  table-hover">
+            <div class="col table-responsive ">
+                <table class="table table-white bg-white rounded shadow-sm  table-hover">
                     <thead>
                         <tr>
                             <th scope="col" >Date </th>
                             <th scope="col">Intitulé du poste</th>
                             <th scope="col">Ville</th>
+                            <th scope="col">Etat</th>
                             <th scope="col">Nbr candidats postulé</th>
                         </tr>
                     </thead>
@@ -85,11 +86,12 @@
                             <th>{{Carbon\Carbon::parse($offre->created_at)->format('Y-m-d')}}</th>
                             <td>{{$offre->Titre}}</td>
                             <td>{{$offre->ville}}</td>
-                            <td>{{$offre->nbr}}</td>
+                            <td>{{$offre->Etat}}</td>
+                            <td><span class="badge  bg-danger badge-pill">{{$offre->nbr}}</span></td>
                         </tr>
                     
                         @endforeach
-                        {{-- {{ $offresweek->links() }} --}}
+                      
                         @else
                         <div class="alert alert-danger text-center" role="alert">
                           <strong>Aucun annonce cette semaine</strong>
@@ -99,7 +101,7 @@
                 </table>
             </div>
         </div>
-
+        {{ $offresweek->links() }}
     </div>
 </div>
 </div>

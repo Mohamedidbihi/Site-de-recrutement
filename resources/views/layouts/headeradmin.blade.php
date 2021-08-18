@@ -10,14 +10,15 @@
                     class="fas fa-project-diagram me-2"></i>Offres entreprises</a>
                     <a href=" {{ URL::to('/Dashboard/offres/Ajitkhdem')}}" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                     class="fas fa-bullhorn me-2"></i>Aji tkhdem Offres</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+            <a href="{{ URL::to('/Dashboard/Candidat')}}" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                     class="far fa-address-book me-2"></i>Candidats</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+            <a href="{{ route('entreprise') }}" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                     class="fas fa-fax me-2"></i>Entreprises</a>
+            <a href="{{ route('infosOffres') }}" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="far fa-address-card"></i> Infos Offres</a>
                 <form action="{{ route('logout')}} " method="post">    
                         @csrf
             <button type="submit" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
-                    class="fas fa-power-off me-2"></i>Logout</button>
+                    class="fas fa-power-off me-2"></i>Deconnexion</button>
                 </form>
         </div>
     </div>

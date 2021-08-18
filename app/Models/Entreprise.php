@@ -22,4 +22,8 @@ class Entreprise extends Model
     {
         return $this->BelongsTo(User::class);
     }
+    public function offre()
+    {
+        return $this->hasMany(offre::class);
+    }
 }

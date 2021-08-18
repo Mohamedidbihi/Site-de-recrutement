@@ -20,12 +20,16 @@ Route::get('/PublierAnnonce',[EntrepriseController::class , 'PublierAnnonce'])->
 Route::get('/MesAnnonces',[EntrepriseController::class , 'MesAnnonces'])->name('mesannonces')->middleware('entreprise');
 Route::post('/PublierAnnonce',[EntrepriseController::class , 'store'])->middleware('entreprise');
 Route::delete('/MesAnnonces/{offre}',[EntrepriseController::class,'destroy'])->name('annonce.destroy')->middleware('entreprise');
-Route::get('/MesAnnonces/{id}/detail', [EntrepriseController::class,'detail'])->name('detail');
+Route::get('/MonCompterh',[EntrepriseController::class , 'moncompte'])->name('moncompterh')->middleware('entreprise');
+Route::put('/MonCompterh/edit',[EntrepriseController::class,'update'])->name('entreprise.update')->middleware('entreprise');
+
 
 
 Route::get('/AccueillCandidat',[CandidatController::class , 'index'])->name('AccueillCandidat')->middleware('candidat');
+Route::get('/MonCompte',[CandidatController::class , 'moncompte'])->name('moncompte')->middleware('candidat');
 Route::get('/AccueillCandidat/{offre}',[CandidatController::class,'show'])->name('Offre.infos')->middleware('candidat');
 Route::post('/AccueillCandidat/{offre}/postuler',[CandidatController::class , 'postuler'])->name('Postuler')->middleware('candidat');
+Route::put('/MonCompte/edit',[CandidatController::class,'update'])->name('candidats.update')->middleware('candidat');
 
 
 Route::get('/RegisterCandidat',[RegisterController::class , 'index'])->name('RegisterCandidat');
@@ -38,6 +42,12 @@ Route::post('/Dashboard/offres/Ajitkhdem/newoffre',[AdminController::class , 'Cr
 Route::put('/Dashboard/offres/activer/{id}',[AdminController::class , 'Activer'])->name('Activer')->middleware('admin');
 Route::put('/Dashboard/offres/Refuser/{id}',[AdminController::class , 'Refuser'])->name('Refuser')->middleware('admin');
 Route::put('/Dashboard/offres/En_attente/{id}',[AdminController::class , 'En_attente'])->name('En_attente')->middleware('admin');
+Route::get('/Dashboard/Candidat',[AdminController::class , 'candidat'])->name('SearchCandidat')->middleware('admin');
+Route::get('/Dashboard/entreprises',[AdminController::class , 'entreprise'])->name('SearchEntreprise')->middleware('admin');
+Route::get('/Dashboard/Candidat/infosOffre',[AdminController::class , 'infosOffres'])->name('infosOffres')->middleware('admin');
+Route::get('/Dashboard/Candidat/QuiPostule/{id}',[AdminController::class , 'QuiPostule'])->name('QuiPostule')->middleware('admin');
+Route::get('/Dashboard/Candidat/Entreprises',[AdminController::class , 'entreprise'])->name('entreprise')->middleware('admin');
+
 
 
   
@@ -47,6 +57,7 @@ Route::get('RecupMetier/{id}', [DropDownSecteurMetier::class,'getMetiers']);
 
 Route::get('/RegisterEntreprise',[RegisterEntrepriseController::class , 'index'])->name('RegisterEntreprise');
 Route::post('/RegisterEntreprise',[RegisterEntrepriseController::class , 'store']);
+
 
 
 Route::post('/logout',[LogoutController::class,'store'])->name('logout');

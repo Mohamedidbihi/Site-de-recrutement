@@ -45,8 +45,7 @@
 
 @include('layouts.header')
 
-
-<div class="Offres">
+<div class="Offres table-responsive">
 <table class="table">
   
   <thead class="table-danger">
@@ -60,7 +59,7 @@
     @if ($offres->count())
 @foreach ($offres as $offre)
 <tr>
-<th scope="row"> {{$offre->created_at}}</th>
+<th scope="row"> {{Carbon\Carbon::parse($offre->created_at)->format('Y-m-d')}}</th>
 <td>
 <form action="{{ route('Offre.infos',$offre->id) }}" method="GET" name="form">
   @csrf
@@ -80,7 +79,7 @@
   </tbody>
 </table>
 </div>
-{{-- {{ $offres->links()}} --}}
+{{ $offres->links()}}
 
 @include('layouts.footer')
 @endsection

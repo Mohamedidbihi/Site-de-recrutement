@@ -89,19 +89,22 @@
           <li class="nav-item ">
             <button type="button" class="btn btn-danger bt">Les offres à la une</button>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link nav-title text-danger"  href="{{ route('moncompte') }}">Mon compte</a>
+          </li>
          @endif
          @if(auth()->user()->role === 'entreprise')
          <li class="nav-item ">
           <a class="btn btn-danger bt" href="{{ route('publierannonce') }}" >Publier une annnonce</a>
         </li>
-
         <li class="nav-item ">
           <a class="nav-link nav-title text-danger" href="{{ route('mesannonces') }}">Mes annonces</a>
         </li>
+        <li class="nav-item ">
+          <a class="nav-link nav-title text-danger"  href="{{ route('moncompterh') }}">Mon compte</a>
+        </li>
         @endif
-          <li class="nav-item ">
-            <a class="nav-link nav-title text-danger" href="#">Mon compte</a>
-          </li>
+          
           <li class="nav-item ">  
            <form action="{{ route('logout')}} " method="post" class="inline">
              @csrf
